@@ -8,7 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import com.desafio.atlantico.ValidacaoString;
 
-@SpringBootTest
+@SpringBootTest(classes = ValidacaoString.class)
 public class ValidacaoStringTest {
 
 	private ValidacaoString validacaoString;

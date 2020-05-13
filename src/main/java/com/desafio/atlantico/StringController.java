@@ -15,7 +15,7 @@ public class StringController {
 	private ValidacaoString validacaoString;
 	
 	@GetMapping
-	public ResponseEntity<?> validar(@RequestParam  String string){
+	public ResponseEntity<?> validar(@RequestParam("string")  String string){
 		
 		if (validacaoString.validar(string)) {
 			return ResponseEntity.ok("String valida");
