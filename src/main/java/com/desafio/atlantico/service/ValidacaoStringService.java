@@ -1,9 +1,9 @@
-package com.desafio.atlantico;
+package com.desafio.atlantico.service;
 
 import org.springframework.stereotype.Service;
 
 @Service
-public class ValidacaoString {
+public class ValidacaoStringService {
 	
 	public boolean validar(String simbolos) {
 		if(simbolos.isEmpty()) {return true;} 

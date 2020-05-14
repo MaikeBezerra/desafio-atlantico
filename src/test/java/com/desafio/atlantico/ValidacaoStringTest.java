@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.desafio.atlantico;
 
 import static org.junit.Assert.assertEquals;
 
@@ -6,16 +6,16 @@ import org.junit.Before;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.desafio.atlantico.ValidacaoString;
+import com.desafio.atlantico.service.ValidacaoStringService;
 
-@SpringBootTest(classes = ValidacaoString.class)
+@SpringBootTest(classes = ValidacaoStringService.class)
 public class ValidacaoStringTest {
 
-	private ValidacaoString validacaoString;
+	private ValidacaoStringService validacaoString;
 	
 	@Before
 	public void iniciar() {
-		this.validacaoString = new ValidacaoString();
+		this.validacaoString = new ValidacaoStringService();
 	}
 	
 	@Test
@@ -59,7 +59,7 @@ public class ValidacaoStringTest {
 	}
 	
 	private boolean validaStringTest(String string) {
-		validacaoString = new ValidacaoString();
+		validacaoString = new ValidacaoStringService();
 		return validacaoString.validar(string);
 	}
 }
